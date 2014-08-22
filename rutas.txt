@@ -1,9 +1,25 @@
-       Prefix Verb   URI Pattern                   Controller#Action
-    regionals GET    /regionals(.:format)          regionals#index
-              POST   /regionals(.:format)          regionals#create
- new_regional GET    /regionals/new(.:format)      regionals#new
-edit_regional GET    /regionals/:id/edit(.:format) regionals#edit
-     regional GET    /regionals/:id(.:format)      regionals#show
-              PATCH  /regionals/:id(.:format)      regionals#update
-              PUT    /regionals/:id(.:format)      regionals#update
-              DELETE /regionals/:id(.:format)      regionals#destroy
+              Prefix Verb   URI Pattern                                        Controller#Action
+             centros GET    /centros(.:format)                                 centros#index
+                     POST   /centros(.:format)                                 centros#create
+          new_centro GET    /centros/new(.:format)                             centros#new
+         edit_centro GET    /centros/:id/edit(.:format)                        centros#edit
+              centro GET    /centros/:id(.:format)                             centros#show
+                     PATCH  /centros/:id(.:format)                             centros#update
+                     PUT    /centros/:id(.:format)                             centros#update
+                     DELETE /centros/:id(.:format)                             centros#destroy
+    regional_centros GET    /regionals/:regional_id/centros(.:format)          centros#index
+                     POST   /regionals/:regional_id/centros(.:format)          centros#create
+ new_regional_centro GET    /regionals/:regional_id/centros/new(.:format)      centros#new
+edit_regional_centro GET    /regionals/:regional_id/centros/:id/edit(.:format) centros#edit
+     regional_centro GET    /regionals/:regional_id/centros/:id(.:format)      centros#show
+                     PATCH  /regionals/:regional_id/centros/:id(.:format)      centros#update
+                     PUT    /regionals/:regional_id/centros/:id(.:format)      centros#update
+                     DELETE /regionals/:regional_id/centros/:id(.:format)      centros#destroy
+           regionals GET    /regionals(.:format)                               regionals#index
+                     POST   /regionals(.:format)                               regionals#create
+        new_regional GET    /regionals/new(.:format)                           regionals#new
+       edit_regional GET    /regionals/:id/edit(.:format)                      regionals#edit
+            regional GET    /regionals/:id(.:format)                           regionals#show
+                     PATCH  /regionals/:id(.:format)                           regionals#update
+                     PUT    /regionals/:id(.:format)                           regionals#update
+                     DELETE /regionals/:id(.:format)                           regionals#destroy

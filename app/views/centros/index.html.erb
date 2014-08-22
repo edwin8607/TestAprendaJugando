@@ -1,0 +1,42 @@
+<%- model_class = Centro -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize + ' de ' + @regional.departamento %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:nombre) %></th>
+      <th><%= model_class.human_attribute_name(:regional_id) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @centros.each do |centro| %>
+      <tr>
+        <td><%= link_to centro.id, regional_centro_path(@regional,centro) %></td>
+        <td><%= centro.nombre %></td>
+        <td><%= centro.regional_id %></td>
+        <td><%=l centro.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.Editar")),
+                      edit_regional_centro_path(@regional,centro), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.Eliminar")),
+                      regional_centro_path(@regional,centro),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirmar", :default => 'Estas Seguro?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.Nuevo centro de formacion")),
+            new_regional_centro_path(@regional),
+            :class => 'btn btn-primary' %>
+
+            <%= link_to t('.back', :default => t("helpers.links.Atras")),
+            regionals_path,
+            :class => 'btn btn-inverse' %>

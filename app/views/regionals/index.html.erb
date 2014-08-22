@@ -14,6 +14,7 @@
   <tbody>
     <% @regionals.each do |regional| %>
       <tr>
+        <td><%= link_to 'Centros de Formacion(' + regional.centros.count.to_s + ')' , regional_centros_path(regional), :class => 'btn btn-mini'%></td> 
         <td><%= link_to regional.id, regional_path(regional) %></td>
         <td><%= regional.departamento %></td>
         <td><%=l regional.created_at %></td>
