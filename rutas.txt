@@ -1,0 +1,9 @@
+       Prefix Verb   URI Pattern                   Controller#Action
+    regionals GET    /regionals(.:format)          regionals#index
+              POST   /regionals(.:format)          regionals#create
+ new_regional GET    /regionals/new(.:format)      regionals#new
+edit_regional GET    /regionals/:id/edit(.:format) regionals#edit
+     regional GET    /regionals/:id(.:format)      regionals#show
+              PATCH  /regionals/:id(.:format)      regionals#update
+              PUT    /regionals/:id(.:format)      regionals#update
+              DELETE /regionals/:id(.:format)      regionals#destroy
