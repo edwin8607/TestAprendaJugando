@@ -1,5 +1,7 @@
 <%= simple_form_for [@regional,@centro], :html => { :class => 'form-horizontal' } do |f| %>
   <%= f.input :nombre %>
+  <%= f.input :ciudad %>
+  <%= f.input :codigo %>
   <div class="form-actions">
     <%= f.button :submit, 'Crear Centro de Formacion', :class => 'btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancelar")),
