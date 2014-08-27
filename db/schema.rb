@@ -11,19 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140825001356) do
+ActiveRecord::Schema.define(version: 20140827000621) do
 
   create_table "centros", force: true do |t|
     t.string   "nombre"
-    t.string   "ciudad"
     t.integer  "regional_id"
-    t.string   "codigo"
     t.datetime "created_at"
     t.datetime "updated_at"
-    
+    t.string   "ciudad"
+    t.string   "codigo"
   end
 
   add_index "centros", ["regional_id"], name: "index_centros_on_regional_id"
+
+  create_table "instructors", force: true do |t|
+    t.string   "nombre"
+    t.string   "apellido"
+    t.string   "titulo"
+    t.integer  "centro_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "instructors", ["centro_id"], name: "index_instructors_on_centro_id"
 
   create_table "regionals", force: true do |t|
     t.string   "departamento"

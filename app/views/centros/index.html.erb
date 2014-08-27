@@ -5,6 +5,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
+    <th>Instructores de formacion</th>
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:nombre) %></th>
       <th><%= model_class.human_attribute_name(:ciudad) %></th>
@@ -17,6 +18,7 @@
   <tbody>
     <% @centros.each do |centro| %>
       <tr>
+        <td><%= link_to 'Instructores(' + centro.instructors.count.to_s + ')' , centro_instructors_path(centro), :class => 'btn btn-mini'%></td> 
         <td><%= link_to centro.id, regional_centro_path(@regional,centro) %></td>
         <td><%= centro.nombre %></td>
         <td><%= centro.ciudad %></td>

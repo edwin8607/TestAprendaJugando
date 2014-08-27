@@ -1,4 +1,12 @@
               Prefix Verb   URI Pattern                                        Controller#Action
+         instructors GET    /instructors(.:format)                             instructors#index
+                     POST   /instructors(.:format)                             instructors#create
+      new_instructor GET    /instructors/new(.:format)                         instructors#new
+     edit_instructor GET    /instructors/:id/edit(.:format)                    instructors#edit
+          instructor GET    /instructors/:id(.:format)                         instructors#show
+                     PATCH  /instructors/:id(.:format)                         instructors#update
+                     PUT    /instructors/:id(.:format)                         instructors#update
+                     DELETE /instructors/:id(.:format)                         instructors#destroy
              centros GET    /centros(.:format)                                 centros#index
                      POST   /centros(.:format)                                 centros#create
           new_centro GET    /centros/new(.:format)                             centros#new
@@ -23,3 +31,4 @@ edit_regional_centro GET    /regionals/:regional_id/centros/:id/edit(.:format) c
                      PATCH  /regionals/:id(.:format)                           regionals#update
                      PUT    /regionals/:id(.:format)                           regionals#update
                      DELETE /regionals/:id(.:format)                           regionals#destroy
+                root GET    /                                                  regionals#index

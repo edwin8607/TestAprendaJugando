@@ -1,0 +1,46 @@
+<%- model_class = Instructor -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.instructores', 'Instructores' + ' Del ' + @centro.nombre], :model => model_class.model_name.human.pluralize.titleize  %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:nombre) %></th>
+      <th><%= model_class.human_attribute_name(:apellido) %></th>
+      <th><%= model_class.human_attribute_name(:titulo) %></th>
+      <th><%= model_class.human_attribute_name(:centro_id) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @instructors.each do |instructor| %>
+      <tr>
+        <td><%= link_to instructor.id, centro_instructor_path(@centro,instructor) %></td>
+        <td><%= instructor.nombre %></td>
+        <td><%= instructor.apellido %></td>
+        <td><%= instructor.titulo %></td>
+        <td><%= instructor.centro.nombre %></td>
+        <td><%=l instructor.created_at %></td>
+        <td>
+          <%= link_to t('.editar', :default => t("helpers.links.Editar")),
+                      edit_centro_instructor_path(@centro,instructor), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.Eliminar")),
+                      centro_instructor_path(@centro,instructor),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirmar", :default => 'Estas Seguro?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.Nuevo")),
+            new_centro_instructor_path(@centro),
+            :class => 'btn btn-primary' %>
+
+        <%= link_to t('.back', :default => t("helpers.links.back")),
+                    regionals_path,
+                    :class => 'btn btn' %>

@@ -1,0 +1,11 @@
+<%= simple_form_for [@centro,@instructor], :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :nombre %>
+  <%= f.input :apellido %>
+  <%= f.input :titulo %>
+  <div class="form-actions">
+    <%= f.button :submit, 'Crear Instructor', :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.Cancelar")),
+                centro_instructors_path(@centro), :class => 'btn' %>
+
+  </div>
+<% end %>

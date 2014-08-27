@@ -64,12 +64,12 @@ class CentrosController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_centro
-      @regional = Regional.find(params[:regional_id])
+      @regional = Regional.find(params[:regional_id]) 
       @centro = Centro.find(params[:id]) if params[:id]
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def centro_params
-      params.require(:centro).permit(:nombre, :regional_id)
+      params.require(:centro).permit(:nombre, :ciudad, :codigo, :regional_id)
     end
 end
