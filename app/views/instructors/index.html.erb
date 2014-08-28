@@ -10,8 +10,8 @@
       <th><%= model_class.human_attribute_name(:apellido) %></th>
       <th><%= model_class.human_attribute_name(:titulo) %></th>
       <th><%= model_class.human_attribute_name(:centro_id) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+      <th><%= model_class.human_attribute_name(:creado) %></th>
+      <th><%=t '.actions', :default => t("helpers.acciones") %></th>
     </tr>
   </thead>
   <tbody>
@@ -41,6 +41,6 @@
             new_centro_instructor_path(@centro),
             :class => 'btn btn-primary' %>
 
-        <%= link_to t('.back', :default => t("helpers.links.back")),
-                    regionals_path,
+        <%= link_to t('.back', :default => t("helpers.links.Atras")),
+                    regional_centros_path(@centro.regional),
                     :class => 'btn btn' %>
