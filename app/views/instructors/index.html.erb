@@ -8,6 +8,8 @@
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:nombre) %></th>
       <th><%= model_class.human_attribute_name(:apellido) %></th>
+      <th><%= model_class.human_attribute_name(:cedula) %></th>
+      <th><%= model_class.human_attribute_name(:email) %></th>
       <th><%= model_class.human_attribute_name(:titulo) %></th>
       <th><%= model_class.human_attribute_name(:centro_id) %></th>
       <th><%= model_class.human_attribute_name(:creado) %></th>
@@ -20,6 +22,8 @@
         <td><%= link_to instructor.id, centro_instructor_path(@centro,instructor) %></td>
         <td><%= instructor.nombre %></td>
         <td><%= instructor.apellido %></td>
+        <td><%= instructor.cedula %></td>
+        <td><%= instructor.email %></td>
         <td><%= instructor.titulo %></td>
         <td><%= instructor.centro.nombre %></td>
         <td><%=l instructor.created_at %></td>

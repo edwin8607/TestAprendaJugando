@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140827000621) do
+ActiveRecord::Schema.define(version: 20140830025052) do
 
   create_table "centros", force: true do |t|
     t.string   "nombre"
@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(version: 20140827000621) do
     t.integer  "centro_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "email"
+    t.string   "cedula"
   end
 
   add_index "instructors", ["centro_id"], name: "index_instructors_on_centro_id"

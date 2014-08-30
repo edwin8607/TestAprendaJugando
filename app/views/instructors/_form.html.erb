@@ -1,6 +1,8 @@
 <%= simple_form_for [@centro,@instructor], :html => { :class => 'form-horizontal' } do |f| %>
   <%= f.input :nombre %>
   <%= f.input :apellido %>
+  <%= f.input :cedula %>
+  <%= f.input :email %>
   <%= f.input :titulo %>
   <div class="form-actions">
     <%= f.button :submit, 'Crear Instructor', :class => 'btn-primary' %>
