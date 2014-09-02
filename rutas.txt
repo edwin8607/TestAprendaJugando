@@ -1,34 +1,51 @@
-              Prefix Verb   URI Pattern                                        Controller#Action
-         instructors GET    /instructors(.:format)                             instructors#index
-                     POST   /instructors(.:format)                             instructors#create
-      new_instructor GET    /instructors/new(.:format)                         instructors#new
-     edit_instructor GET    /instructors/:id/edit(.:format)                    instructors#edit
-          instructor GET    /instructors/:id(.:format)                         instructors#show
-                     PATCH  /instructors/:id(.:format)                         instructors#update
-                     PUT    /instructors/:id(.:format)                         instructors#update
-                     DELETE /instructors/:id(.:format)                         instructors#destroy
-             centros GET    /centros(.:format)                                 centros#index
-                     POST   /centros(.:format)                                 centros#create
-          new_centro GET    /centros/new(.:format)                             centros#new
-         edit_centro GET    /centros/:id/edit(.:format)                        centros#edit
-              centro GET    /centros/:id(.:format)                             centros#show
-                     PATCH  /centros/:id(.:format)                             centros#update
-                     PUT    /centros/:id(.:format)                             centros#update
-                     DELETE /centros/:id(.:format)                             centros#destroy
-    regional_centros GET    /regionals/:regional_id/centros(.:format)          centros#index
-                     POST   /regionals/:regional_id/centros(.:format)          centros#create
- new_regional_centro GET    /regionals/:regional_id/centros/new(.:format)      centros#new
-edit_regional_centro GET    /regionals/:regional_id/centros/:id/edit(.:format) centros#edit
-     regional_centro GET    /regionals/:regional_id/centros/:id(.:format)      centros#show
-                     PATCH  /regionals/:regional_id/centros/:id(.:format)      centros#update
-                     PUT    /regionals/:regional_id/centros/:id(.:format)      centros#update
-                     DELETE /regionals/:regional_id/centros/:id(.:format)      centros#destroy
-           regionals GET    /regionals(.:format)                               regionals#index
-                     POST   /regionals(.:format)                               regionals#create
-        new_regional GET    /regionals/new(.:format)                           regionals#new
-       edit_regional GET    /regionals/:id/edit(.:format)                      regionals#edit
-            regional GET    /regionals/:id(.:format)                           regionals#show
-                     PATCH  /regionals/:id(.:format)                           regionals#update
-                     PUT    /regionals/:id(.:format)                           regionals#update
-                     DELETE /regionals/:id(.:format)                           regionals#destroy
-                root GET    /                                                  regionals#index
+                Prefix Verb   URI Pattern                                        Controller#Action
+     static_pages_Home GET    /static_pages/Home(.:format)                       static_pages#Home
+           instructors GET    /instructors(.:format)                             instructors#index
+                       POST   /instructors(.:format)                             instructors#create
+        new_instructor GET    /instructors/new(.:format)                         instructors#new
+       edit_instructor GET    /instructors/:id/edit(.:format)                    instructors#edit
+            instructor GET    /instructors/:id(.:format)                         instructors#show
+                       PATCH  /instructors/:id(.:format)                         instructors#update
+                       PUT    /instructors/:id(.:format)                         instructors#update
+                       DELETE /instructors/:id(.:format)                         instructors#destroy
+    centro_instructors GET    /centros/:centro_id/instructors(.:format)          instructors#index
+                       POST   /centros/:centro_id/instructors(.:format)          instructors#create
+ new_centro_instructor GET    /centros/:centro_id/instructors/new(.:format)      instructors#new
+edit_centro_instructor GET    /centros/:centro_id/instructors/:id/edit(.:format) instructors#edit
+     centro_instructor GET    /centros/:centro_id/instructors/:id(.:format)      instructors#show
+                       PATCH  /centros/:centro_id/instructors/:id(.:format)      instructors#update
+                       PUT    /centros/:centro_id/instructors/:id(.:format)      instructors#update
+                       DELETE /centros/:centro_id/instructors/:id(.:format)      instructors#destroy
+               centros GET    /centros(.:format)                                 centros#index
+                       POST   /centros(.:format)                                 centros#create
+            new_centro GET    /centros/new(.:format)                             centros#new
+           edit_centro GET    /centros/:id/edit(.:format)                        centros#edit
+                centro GET    /centros/:id(.:format)                             centros#show
+                       PATCH  /centros/:id(.:format)                             centros#update
+                       PUT    /centros/:id(.:format)                             centros#update
+                       DELETE /centros/:id(.:format)                             centros#destroy
+                       GET    /centros(.:format)                                 centros#index
+                       POST   /centros(.:format)                                 centros#create
+                       GET    /centros/new(.:format)                             centros#new
+                       GET    /centros/:id/edit(.:format)                        centros#edit
+                       GET    /centros/:id(.:format)                             centros#show
+                       PATCH  /centros/:id(.:format)                             centros#update
+                       PUT    /centros/:id(.:format)                             centros#update
+                       DELETE /centros/:id(.:format)                             centros#destroy
+      regional_centros GET    /regionals/:regional_id/centros(.:format)          centros#index
+                       POST   /regionals/:regional_id/centros(.:format)          centros#create
+   new_regional_centro GET    /regionals/:regional_id/centros/new(.:format)      centros#new
+  edit_regional_centro GET    /regionals/:regional_id/centros/:id/edit(.:format) centros#edit
+       regional_centro GET    /regionals/:regional_id/centros/:id(.:format)      centros#show
+                       PATCH  /regionals/:regional_id/centros/:id(.:format)      centros#update
+                       PUT    /regionals/:regional_id/centros/:id(.:format)      centros#update
+                       DELETE /regionals/:regional_id/centros/:id(.:format)      centros#destroy
+             regionals GET    /regionals(.:format)                               regionals#index
+                       POST   /regionals(.:format)                               regionals#create
+          new_regional GET    /regionals/new(.:format)                           regionals#new
+         edit_regional GET    /regionals/:id/edit(.:format)                      regionals#edit
+              regional GET    /regionals/:id(.:format)                           regionals#show
+                       PATCH  /regionals/:id(.:format)                           regionals#update
+                       PUT    /regionals/:id(.:format)                           regionals#update
+                       DELETE /regionals/:id(.:format)                           regionals#destroy
+                  root GET    /                                                  static_pages#home

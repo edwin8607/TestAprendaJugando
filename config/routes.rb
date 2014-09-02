@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+ 
+
   resources :instructors
 
   resources :centros do 
@@ -10,6 +12,8 @@ Rails.application.routes.draw do
   resources :regionals do 
     resources :centros 
   end
+
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

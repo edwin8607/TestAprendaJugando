@@ -4,6 +4,6 @@ class Centro < ActiveRecord::Base
 
   validates :codigo, uniqueness: {message: "No se puede repetir"}
   validates :codigo, numericality: true
-  validates :nombre, uniqueness: {message: "Ya existe"}
+  validates :nombre, uniqueness: {message: "Este Centro de formacion ya existe"}
 
 end
