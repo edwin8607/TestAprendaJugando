@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  centro_id: 
+  programa_id: 
+
+two:
+  centro_id: 
+  programa_id: 
