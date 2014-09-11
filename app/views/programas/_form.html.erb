@@ -1,0 +1,10 @@
+<%= simple_form_for [@centro,@programa], :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :nombre_programa %>
+  <%= f.input :ficha_programa %>
+  
+  <div class="form-actions">
+    <%= f.button :submit, 'crear Programa de formacion', :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancelar")),
+                centro_programas_path(@centro), :class => 'btn' %>
+  </div>
+<% end %>

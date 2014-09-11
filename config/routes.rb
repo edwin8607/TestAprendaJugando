@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
  
 
+  resources :programas
+
+  resources :centros do
+    resources :programas
+  end
+
+
   resources :instructors
 
   resources :centros do 
@@ -12,6 +19,8 @@ Rails.application.routes.draw do
   resources :regionals do 
     resources :centros 
   end
+
+
 
   
 

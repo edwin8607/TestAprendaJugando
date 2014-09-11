@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre_programa: MyString
+  ficha_programa: MyString
+  centro_id: 
+
+two:
+  nombre_programa: MyString
+  ficha_programa: MyString
+  centro_id: 

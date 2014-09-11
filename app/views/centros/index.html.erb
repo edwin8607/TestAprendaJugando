@@ -5,6 +5,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
+    <th>Programas de Formacion</th>
     <th>Instructores de formacion</th>
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:nombre) %></th>
@@ -18,6 +19,7 @@
   <tbody>
     <% @centros.each do |centro| %>
       <tr>
+        <td><%= link_to 'Programas de Formacion(' + centro.programas.count.to_s + ')' , centro_programas_path(centro), :class => 'btn btn-mini'%></td>
         <td><%= link_to 'Instructores(' + centro.instructors.count.to_s + ')' , centro_instructors_path(centro), :class => 'btn btn-mini'%></td> 
         <td><%= link_to centro.id, regional_centro_path(@regional,centro) %></td>
         <td><%= centro.nombre %></td>
@@ -41,8 +43,8 @@
 
 <%= link_to t('.new', :default => t("helpers.links.Nuevo centro de formacion")),
             new_regional_centro_path(@regional),
-            :class => 'btn btn-primary' %>
+            :class => 'btn btn-success' %>
 
             <%= link_to t('.back', :default => t("helpers.links.Atras")),
             regionals_path,
-            :class => 'btn btn-inverse' %>
+            :class => 'btn btn-primary' %>

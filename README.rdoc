@@ -1,28 +1,6 @@
-== README
+1 - genero un scaffold de nombre regionals y su atributo es nombre
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+2- genero un scaffold de nombre centro y sus atributos son nombre, ciudad, codigo... y hacen referencia a una regional
 
-Things you may want to cover:
+3- genero un scaffold de nombre instructor y sus atributos son nombre, apellido, cedula, email, titulo... y hacen referencia a un centro
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
