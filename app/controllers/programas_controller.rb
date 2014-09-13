@@ -56,7 +56,7 @@ class ProgramasController < ApplicationController
   def destroy
     @programa.destroy
     respond_to do |format|
-      format.html { redirect_to programas_url, notice: 'Programa was successfully destroyed.' }
+      format.html { redirect_to  centro_programas_path(@centro), notice: 'Programa was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

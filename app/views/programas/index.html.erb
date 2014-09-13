@@ -5,6 +5,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
+      <th>Fichas de formacion</th>
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:nombre) %></th>
       <th><%= model_class.human_attribute_name(:centro_id) %></th>
@@ -15,7 +16,8 @@
   <tbody>
     <% @programas.each do |programa| %>
       <tr>
-        <td><%= link_to programa.id, programa_path(programa) %></td>
+        <td><%= link_to 'Fichas de formacion(' + programa.fichas.count.to_s + ')', programa_fichas_path(programa), :class => 'btn btn-mini'%></td>
+        <td><%= link_to programa.id, centro_programa_path(@centro,programa) %></td>
         <td><%= programa.nombre %></td>
         <td><%= programa.centro.nombre %></td>
         <td><%=l programa.created_at %></td>

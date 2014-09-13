@@ -1,0 +1,13 @@
+<%= simple_form_for [@ficha,@estudiante], :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :nombres %>
+  <%= f.input :apellidos %>
+  <%= f.input :cedula %>
+  <%= f.input :sexo %>
+  <%= f.input :email %>
+ 
+  <div class="form-actions">
+    <%= f.button :submit, :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                ficha_estudiantes_path(@ficha), :class => 'btn' %>
+  </div>
+<% end %>

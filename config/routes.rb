@@ -1,6 +1,17 @@
 Rails.application.routes.draw do
  
 
+  resources :estudiantes
+  resources :fichas do 
+    resources :estudiantes
+  end
+
+  resources :fichas
+  
+  resources :programas do 
+    resources :fichas
+  end
+
   resources :programas
 
   resources :centros do

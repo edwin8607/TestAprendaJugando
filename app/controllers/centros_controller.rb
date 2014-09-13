@@ -56,7 +56,7 @@ class CentrosController < ApplicationController
   def destroy
     @centro.destroy
     respond_to do |format|
-      format.html { redirect_to centros_url, notice: 'Centro was successfully destroyed.' }
+      format.html { redirect_to regional_centros_path(@regional), notice: 'Centro was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
