@@ -1,13 +1,12 @@
 Rails.application.routes.draw do
  
 
-  resources :centroprogramas
-
   resources :programas
 
   resources :centros do
-    resources :programas
+    resources :programas 
   end
+   
 
 
   resources :instructors

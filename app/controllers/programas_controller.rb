@@ -1,6 +1,5 @@
 class ProgramasController < ApplicationController
   before_action :set_programa
-
   # GET /programas
   # GET /programas.json
   def index
@@ -43,7 +42,7 @@ class ProgramasController < ApplicationController
   def update
     respond_to do |format|
       if @programa.update(programa_params)
-        format.html { redirect_to centro_programas_path(@centro,@programa), notice: 'Programa was successfully updated.' }
+        format.html { redirect_to centro_programa_path(@centro,@programa), notice: 'Programa was successfully updated.' }
         format.json { render :show, status: :ok, location: @programa }
       else
         format.html { render :edit }
@@ -57,7 +56,7 @@ class ProgramasController < ApplicationController
   def destroy
     @programa.destroy
     respond_to do |format|
-      format.html { redirect_to centro_programas_path(@centro), notice: 'Programa was successfully destroyed.' }
+      format.html { redirect_to programas_url, notice: 'Programa was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -71,6 +70,6 @@ class ProgramasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def programa_params
-      params.require(:programa).permit(:nombre_programa, :ficha_programa, :centro_id)
+      params.require(:programa).permit(:nombre, :centro_id)
     end
 end

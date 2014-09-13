@@ -1,8 +1,9 @@
 class Centro < ActiveRecord::Base
   belongs_to :regional
   has_many :instructors
-  has_many :centroprogramas
-  has_many  :programas, through: :centroprogramas
+  has_many :programas
+  
+  
 
 
   validates :codigo, uniqueness: {message: "No se puede repetir"}

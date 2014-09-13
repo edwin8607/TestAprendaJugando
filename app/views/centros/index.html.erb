@@ -19,7 +19,7 @@
   <tbody>
     <% @centros.each do |centro| %>
       <tr>
-        <td><%= link_to 'Programas de Formacion(' + centro.programas.count.to_s + ')' , centro_programas_path(centro), :class => 'btn btn-mini'%></td>
+        <td><%= link_to 'Programas de formacion(' + centro.programas.count.to_s + ')', centro_programas_path(centro), :class => 'btn btn-mini'%></td>
         <td><%= link_to 'Instructores(' + centro.instructors.count.to_s + ')' , centro_instructors_path(centro), :class => 'btn btn-mini'%></td> 
         <td><%= link_to centro.id, regional_centro_path(@regional,centro) %></td>
         <td><%= centro.nombre %></td>

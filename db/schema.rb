@@ -11,17 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140911011111) do
-
-  create_table "centroprogramas", force: true do |t|
-    t.integer  "centro_id"
-    t.integer  "programa_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "centroprogramas", ["centro_id"], name: "index_centroprogramas_on_centro_id"
-  add_index "centroprogramas", ["programa_id"], name: "index_centroprogramas_on_programa_id"
+ActiveRecord::Schema.define(version: 20140913022534) do
 
   create_table "centros", force: true do |t|
     t.string   "nombre"
@@ -33,16 +23,6 @@ ActiveRecord::Schema.define(version: 20140911011111) do
   end
 
   add_index "centros", ["regional_id"], name: "index_centros_on_regional_id"
-
-  create_table "fichas_formacions", force: true do |t|
-    t.string   "nombreficha"
-    t.string   "numeroficha"
-    t.integer  "centro_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "fichas_formacions", ["centro_id"], name: "index_fichas_formacions_on_centro_id"
 
   create_table "instructors", force: true do |t|
     t.string   "nombre"
@@ -58,8 +38,7 @@ ActiveRecord::Schema.define(version: 20140911011111) do
   add_index "instructors", ["centro_id"], name: "index_instructors_on_centro_id"
 
   create_table "programas", force: true do |t|
-    t.string   "nombre_programa"
-    t.string   "ficha_programa"
+    t.string   "nombre"
     t.integer  "centro_id"
     t.datetime "created_at"
     t.datetime "updated_at"
