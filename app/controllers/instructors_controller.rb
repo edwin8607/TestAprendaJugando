@@ -1,12 +1,15 @@
 class InstructorsController < ApplicationController
-  before_action :set_instructor
+  before_action :set_instructor, except: [:allinstructors]
 
   # GET /instructors
   # GET /instructors.json
   def index
     @instructors = @centro.instructors.all
   end
-
+  
+  def allinstructors
+    @instructors = Instructor.all
+  end  
   # GET /instructors/1
   # GET /instructors/1.json
   def show
@@ -65,7 +68,7 @@ class InstructorsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_instructor
-      @centro = Centro.find(params[:centro_id])
+      @centro = Centro.find(params[:centro_id]) 
       @instructor = Instructor.find(params[:id]) if params[:id]
     end
 

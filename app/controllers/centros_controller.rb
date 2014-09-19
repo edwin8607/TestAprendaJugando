@@ -7,6 +7,11 @@ class CentrosController < ApplicationController
     @centros = @regional.centros.all
   end
 
+  def idx
+    
+  end
+
+
   # GET /centros/1
   # GET /centros/1.json
   def show

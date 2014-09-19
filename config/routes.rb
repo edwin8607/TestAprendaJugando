@@ -14,18 +14,19 @@ Rails.application.routes.draw do
 
   resources :programas
 
-  resources :centros do
-    resources :programas 
+  resources :centros do 
+    resources :programas
   end
-   
 
-
+  
   resources :instructors
+  get 'allinstructors', to: 'instructors#allinstructors', as: 'allinstructors'
 
   resources :centros do 
     resources :instructors
   end
 
+  
   resources :centros
 
   resources :regionals do 
@@ -41,6 +42,8 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'regionals#index'
+
+  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

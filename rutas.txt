@@ -1,5 +1,76 @@
                 Prefix Verb   URI Pattern                                        Controller#Action
-     static_pages_Home GET    /static_pages/Home(.:format)                       static_pages#Home
+           estudiantes GET    /estudiantes(.:format)                             estudiantes#index
+                       POST   /estudiantes(.:format)                             estudiantes#create
+        new_estudiante GET    /estudiantes/new(.:format)                         estudiantes#new
+       edit_estudiante GET    /estudiantes/:id/edit(.:format)                    estudiantes#edit
+            estudiante GET    /estudiantes/:id(.:format)                         estudiantes#show
+                       PATCH  /estudiantes/:id(.:format)                         estudiantes#update
+                       PUT    /estudiantes/:id(.:format)                         estudiantes#update
+                       DELETE /estudiantes/:id(.:format)                         estudiantes#destroy
+     ficha_estudiantes GET    /fichas/:ficha_id/estudiantes(.:format)            estudiantes#index
+                       POST   /fichas/:ficha_id/estudiantes(.:format)            estudiantes#create
+  new_ficha_estudiante GET    /fichas/:ficha_id/estudiantes/new(.:format)        estudiantes#new
+ edit_ficha_estudiante GET    /fichas/:ficha_id/estudiantes/:id/edit(.:format)   estudiantes#edit
+      ficha_estudiante GET    /fichas/:ficha_id/estudiantes/:id(.:format)        estudiantes#show
+                       PATCH  /fichas/:ficha_id/estudiantes/:id(.:format)        estudiantes#update
+                       PUT    /fichas/:ficha_id/estudiantes/:id(.:format)        estudiantes#update
+                       DELETE /fichas/:ficha_id/estudiantes/:id(.:format)        estudiantes#destroy
+                fichas GET    /fichas(.:format)                                  fichas#index
+                       POST   /fichas(.:format)                                  fichas#create
+             new_ficha GET    /fichas/new(.:format)                              fichas#new
+            edit_ficha GET    /fichas/:id/edit(.:format)                         fichas#edit
+                 ficha GET    /fichas/:id(.:format)                              fichas#show
+                       PATCH  /fichas/:id(.:format)                              fichas#update
+                       PUT    /fichas/:id(.:format)                              fichas#update
+                       DELETE /fichas/:id(.:format)                              fichas#destroy
+                       GET    /fichas(.:format)                                  fichas#index
+                       POST   /fichas(.:format)                                  fichas#create
+                       GET    /fichas/new(.:format)                              fichas#new
+                       GET    /fichas/:id/edit(.:format)                         fichas#edit
+                       GET    /fichas/:id(.:format)                              fichas#show
+                       PATCH  /fichas/:id(.:format)                              fichas#update
+                       PUT    /fichas/:id(.:format)                              fichas#update
+                       DELETE /fichas/:id(.:format)                              fichas#destroy
+       programa_fichas GET    /programas/:programa_id/fichas(.:format)           fichas#index
+                       POST   /programas/:programa_id/fichas(.:format)           fichas#create
+    new_programa_ficha GET    /programas/:programa_id/fichas/new(.:format)       fichas#new
+   edit_programa_ficha GET    /programas/:programa_id/fichas/:id/edit(.:format)  fichas#edit
+        programa_ficha GET    /programas/:programa_id/fichas/:id(.:format)       fichas#show
+                       PATCH  /programas/:programa_id/fichas/:id(.:format)       fichas#update
+                       PUT    /programas/:programa_id/fichas/:id(.:format)       fichas#update
+                       DELETE /programas/:programa_id/fichas/:id(.:format)       fichas#destroy
+             programas GET    /programas(.:format)                               programas#index
+                       POST   /programas(.:format)                               programas#create
+          new_programa GET    /programas/new(.:format)                           programas#new
+         edit_programa GET    /programas/:id/edit(.:format)                      programas#edit
+              programa GET    /programas/:id(.:format)                           programas#show
+                       PATCH  /programas/:id(.:format)                           programas#update
+                       PUT    /programas/:id(.:format)                           programas#update
+                       DELETE /programas/:id(.:format)                           programas#destroy
+                       GET    /programas(.:format)                               programas#index
+                       POST   /programas(.:format)                               programas#create
+                       GET    /programas/new(.:format)                           programas#new
+                       GET    /programas/:id/edit(.:format)                      programas#edit
+                       GET    /programas/:id(.:format)                           programas#show
+                       PATCH  /programas/:id(.:format)                           programas#update
+                       PUT    /programas/:id(.:format)                           programas#update
+                       DELETE /programas/:id(.:format)                           programas#destroy
+      centro_programas GET    /centros/:centro_id/programas(.:format)            programas#index
+                       POST   /centros/:centro_id/programas(.:format)            programas#create
+   new_centro_programa GET    /centros/:centro_id/programas/new(.:format)        programas#new
+  edit_centro_programa GET    /centros/:centro_id/programas/:id/edit(.:format)   programas#edit
+       centro_programa GET    /centros/:centro_id/programas/:id(.:format)        programas#show
+                       PATCH  /centros/:centro_id/programas/:id(.:format)        programas#update
+                       PUT    /centros/:centro_id/programas/:id(.:format)        programas#update
+                       DELETE /centros/:centro_id/programas/:id(.:format)        programas#destroy
+               centros GET    /centros(.:format)                                 centros#index
+                       POST   /centros(.:format)                                 centros#create
+            new_centro GET    /centros/new(.:format)                             centros#new
+           edit_centro GET    /centros/:id/edit(.:format)                        centros#edit
+                centro GET    /centros/:id(.:format)                             centros#show
+                       PATCH  /centros/:id(.:format)                             centros#update
+                       PUT    /centros/:id(.:format)                             centros#update
+                       DELETE /centros/:id(.:format)                             centros#destroy
            instructors GET    /instructors(.:format)                             instructors#index
                        POST   /instructors(.:format)                             instructors#create
         new_instructor GET    /instructors/new(.:format)                         instructors#new
@@ -8,6 +79,7 @@
                        PATCH  /instructors/:id(.:format)                         instructors#update
                        PUT    /instructors/:id(.:format)                         instructors#update
                        DELETE /instructors/:id(.:format)                         instructors#destroy
+        allinstructors GET    /allinstructors(.:format)                          instructors#allinstructors
     centro_instructors GET    /centros/:centro_id/instructors(.:format)          instructors#index
                        POST   /centros/:centro_id/instructors(.:format)          instructors#create
  new_centro_instructor GET    /centros/:centro_id/instructors/new(.:format)      instructors#new
@@ -16,11 +88,11 @@ edit_centro_instructor GET    /centros/:centro_id/instructors/:id/edit(.:format)
                        PATCH  /centros/:centro_id/instructors/:id(.:format)      instructors#update
                        PUT    /centros/:centro_id/instructors/:id(.:format)      instructors#update
                        DELETE /centros/:centro_id/instructors/:id(.:format)      instructors#destroy
-               centros GET    /centros(.:format)                                 centros#index
+                       GET    /centros(.:format)                                 centros#index
                        POST   /centros(.:format)                                 centros#create
-            new_centro GET    /centros/new(.:format)                             centros#new
-           edit_centro GET    /centros/:id/edit(.:format)                        centros#edit
-                centro GET    /centros/:id(.:format)                             centros#show
+                       GET    /centros/new(.:format)                             centros#new
+                       GET    /centros/:id/edit(.:format)                        centros#edit
+                       GET    /centros/:id(.:format)                             centros#show
                        PATCH  /centros/:id(.:format)                             centros#update
                        PUT    /centros/:id(.:format)                             centros#update
                        DELETE /centros/:id(.:format)                             centros#destroy
@@ -48,4 +120,4 @@ edit_centro_instructor GET    /centros/:centro_id/instructors/:id/edit(.:format)
                        PATCH  /regionals/:id(.:format)                           regionals#update
                        PUT    /regionals/:id(.:format)                           regionals#update
                        DELETE /regionals/:id(.:format)                           regionals#destroy
-                  root GET    /                                                  static_pages#home
+                  root GET    /                                                  regionals#index

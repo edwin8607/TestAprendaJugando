@@ -1,0 +1,28 @@
+<%- model_class = Instructor -%>
+<div class="page-header">
+  <h1>Listado de Instructores</h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:nombre) %></th>
+      <th><%= model_class.human_attribute_name(:apellido) %></th>
+      <th><%= model_class.human_attribute_name(:cedula) %></th>
+      <th><%= model_class.human_attribute_name(:email) %></th>
+      <th><%= model_class.human_attribute_name(:titulo) %></th>
+      <th><%= model_class.human_attribute_name(:centro_id) %></th>
+      <th><%= model_class.human_attribute_name(:creado) %></th>
+      <th><%=t '.actions', :default => t("helpers.acciones") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @instructors %>
+      
+    
+  </tbody>
+</table>
+
+
+
+        
