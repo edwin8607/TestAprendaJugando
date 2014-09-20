@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140913041849) do
+ActiveRecord::Schema.define(version: 20140919040143) do
 
   create_table "centros", force: true do |t|
     t.string   "nombre"
@@ -73,5 +73,14 @@ ActiveRecord::Schema.define(version: 20140913041849) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "temas", force: true do |t|
+    t.string   "nombre_tema"
+    t.integer  "programa_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "temas", ["programa_id"], name: "index_temas_on_programa_id"
 
 end

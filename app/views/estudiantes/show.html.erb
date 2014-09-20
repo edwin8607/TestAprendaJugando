@@ -11,7 +11,7 @@
   <dt><strong><%= model_class.human_attribute_name(:cedula) %>:</strong></dt>
   <dd><%= @estudiante.cedula %></dd>
   <dt><strong><%= model_class.human_attribute_name(:sexo) %>:</strong></dt>
-  <dd><%= @estudiante.sexo %></dd>
+  <dd><%= mostrar_genero(@estudiante.sexo) %></dd>
   <dt><strong><%= model_class.human_attribute_name(:email) %>:</strong></dt>
   <dd><%= @estudiante.email %></dd>
   <dt><strong><%= model_class.human_attribute_name(:ficha_id) %>:</strong></dt>

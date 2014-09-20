@@ -1,0 +1,10 @@
+<%= simple_form_for @tema, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :nombre_tema %>
+  
+  Programa:  <%= f.collection_select :programa_id, Programa.all, :id, :nombre, class: "from-control", prompt: "seleccione Programa de formacion" %>
+  <div class="form-actions">
+    <%= f.button :submit, :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                temas_path, :class => 'btn' %>
+  </div>
+<% end %>

@@ -4,3 +4,5 @@
 
 3- genero un scaffold de nombre instructor y sus atributos son nombre, apellido, cedula, email, titulo... y hacen referencia a un centro
 
+4 genero un scaffold de nombre programas con sus respectivos atributos
+
