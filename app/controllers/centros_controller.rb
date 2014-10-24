@@ -1,5 +1,5 @@
 class CentrosController < ApplicationController
-  before_action :set_centro
+  before_action :set_centro, except: [:allcentros]
 
   # GET /centros
   # GET /centros.json
@@ -7,14 +7,17 @@ class CentrosController < ApplicationController
     @centros = @regional.centros.all
   end
 
-  def idx
-    
+  def allcentros
+
+    @centros = Centro.all
+
   end
 
 
   # GET /centros/1
   # GET /centros/1.json
   def show
+    @regional = Regional.find(params[:regional_id])
   end
 
   # GET /centros/new

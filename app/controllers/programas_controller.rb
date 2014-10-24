@@ -9,6 +9,7 @@ class ProgramasController < ApplicationController
   # GET /programas/1
   # GET /programas/1.json
   def show
+    @centro = Centro.find(params[:centro_id])
   end
 
   # GET /programas/new

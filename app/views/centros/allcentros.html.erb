@@ -1,0 +1,23 @@
+<%- model_class = Centro -%>
+<div class="page-header">
+  <h1>Listado De Centros De Formacion</h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:nombre) %></th>
+      <th><%= model_class.human_attribute_name(:ciudad) %></th>
+      <th><%= model_class.human_attribute_name(:regional_id) %></th>
+      <th><%= model_class.human_attribute_name(:codigo) %></th>
+      <th><%= model_class.human_attribute_name(:creado) %></th>
+      <th><%=t '.actions', :default => t("helpers.acciones") %></th>
+    </tr>
+  </thead>
+  <tbody>
+  <%= render @centros %>
+  
+
+
+ </tbody>
+</table>

@@ -32,6 +32,9 @@ Rails.application.routes.draw do
   resources :instructors
   get 'allinstructors', to: 'instructors#allinstructors', as: 'allinstructors'
 
+    resources :centros
+    get 'allcentros', to: 'centros#allcentros', as: 'allcentros'
+
   resources :centros do 
     resources :instructors
   end
@@ -56,7 +59,7 @@ Rails.application.routes.draw do
   match '/about', to: 'static_pages#about', via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
 
-  root :to => 'static_pages#home'
+  root :to => 'regionals#index'
 
   
 

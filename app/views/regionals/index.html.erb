@@ -1,6 +1,6 @@
 <%- model_class = Regional -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => [:'helpers.titles.regionales', 'Regionales'], :model => model_class.model_name.human.pluralize.titleize %></h1>
+  <h1><%=t '.title', :default => [:'helpers.titles.regionales', 'Regionales Sena'], :model => model_class.model_name.human.pluralize.titleize %></h1>
 </div>
 <table class="table table-striped">
   <thead>
@@ -16,7 +16,7 @@
     <% @regionals.each do |regional| %>
       <tr>
         <td><%= link_to regional.id, regional_path(regional) %></td>
-        <td><%= link_to 'Centros de Formacion de ' + regional.departamento + ' ' + '(' + regional.centros.count.to_s + ')' , regional_centros_path(regional) %></td>
+        <td><%= link_to 'Regional ' + regional.departamento + ' ' + '(' + regional.centros.count.to_s + ')' , regional_centros_path(regional) %></td>
         <td><%=l regional.created_at %></td>
         <td>
           <%= link_to t('.editar', :default => t("helpers.links.editar")),
