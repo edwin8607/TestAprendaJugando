@@ -12,8 +12,8 @@
       <th><%= model_class.human_attribute_name(:sexo) %></th>
       <th><%= model_class.human_attribute_name(:email) %></th>
       <th><%= model_class.human_attribute_name(:ficha_id) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+      <th><%= model_class.human_attribute_name(:creado) %></th>
+      <th><%=t '.actions', :default => t("helpers.acciones") %></th>
     </tr>
   </thead>
   <tbody>
@@ -28,12 +28,12 @@
         <td><%= estudiante.ficha.numeroficha %></td>
         <td><%=l estudiante.created_at %></td>
         <td>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+          <%= link_to t('.edit', :default => t("helpers.links.Editar")),
                       edit_ficha_estudiante_path(@ficha,estudiante), :class => 'btn btn-mini' %>
-          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+          <%= link_to t('.destroy', :default => t("helpers.links.Eliminar")),
                       ficha_estudiante_path(@ficha,estudiante),
                       :method => :delete,
-                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.Confirmar", :default => 'Esta seguro?')) },
                       :class => 'btn btn-mini btn-danger' %>
         </td>
       </tr>
@@ -41,6 +41,6 @@
   </tbody>
 </table>
 
-<%= link_to t('.new', :default => t("helpers.links.new")),
+<%= link_to t('.new', :default => t("helpers.links.Nuevo")),
             new_ficha_estudiante_path(@ficha),
             :class => 'btn btn-primary' %>

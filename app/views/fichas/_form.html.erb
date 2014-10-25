@@ -2,8 +2,8 @@
   <%= f.input :numeroficha %>
   
   <div class="form-actions">
-    <%= f.button :submit, :class => 'btn-primary' %>
-    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+    <%= f.button :submit, 'Crear Ficha', :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.Cancelar")),
                 programa_fichas_path(@programa), :class => 'btn' %>
   </div>
 <% end %>

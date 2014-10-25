@@ -3,8 +3,8 @@
   
   Programa:  <%= f.collection_select :programa_id, Programa.all, :id, :nombre, class: "from-control", prompt: "seleccione Programa de formacion" %>
   <div class="form-actions">
-    <%= f.button :submit, :class => 'btn-primary' %>
-    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+    <%= f.button :submit, 'Crear Tema', :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancelar")),
                 temas_path, :class => 'btn' %>
   </div>
 <% end %>
